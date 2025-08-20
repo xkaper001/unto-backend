@@ -11,11 +11,11 @@ from portia import (
 
 # This Appwrite function will be executed every time your function is triggered
 def main(context):
+    
     google_config = Config.from_default(
         llm_provider=LLMProvider.GOOGLE,
         default_model="google/gemini-2.0-flash",
-        google_api_key=context.res.text(os.environ['GOOGLE_API_KEY'])
-
+        google_api_key=os.environ['GOOGLE_API_KEY']
     )
 
     portia = Portia(config=google_config, tools=example_tool_registry)
