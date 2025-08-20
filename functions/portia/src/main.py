@@ -14,7 +14,7 @@ def main(context):
     
     google_config = Config.from_default(
         llm_provider=LLMProvider.GOOGLE,
-        default_model="google/gemini-2.0-flash",
+        default_model="google/gemini-2.5-flash",
         google_api_key=os.environ['GOOGLE_API_KEY']
     )
 
